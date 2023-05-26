@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    .m-container {
+        display: flex;
+    }
+
+    .m-container .history {
+        width: 18.5rem;
+        font-family: 'Poppins', sans-serif;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .calc-h {
+        margin-right: 20rem;
+        margin-left: auto;
+        font-family: 'Poppins', sans-serif;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .container {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="m-container">
+        <div class="c-container">
+            <h1>Calculator</h1>
+            <div class="container">
+                <div class="row">
+                    <input type="text" class="input" id="calculationInput" readonly>
+                </div>
+                <div class="row">
+                    <button class="button d-grey">AC</button>
+                    <button class="button d-grey">+/-</button>
+                    <button class="button d-grey">%</button>
+                    <button class="button gold">/</button>
+                </div>
+                <div class="row">
+                    <button class="button grey">7</button>
+                    <button class="button grey">8</button>
+                    <button class="button grey">9</button>
+                    <button class="button gold">*</button>
+                </div>
+                <div class="row">
+                    <button class="button grey">4</button>
+                    <button class="button grey">5</button>
+                    <button class="button grey">6</button>
+                    <button class="button gold">-</button>
+                </div>
+                <div class="row">
+                    <button class="button grey">1</button>
+                    <button class="button grey">2</button>
+                    <button class="button grey">3</button>
+                    <button class="button gold">+</button>
+                </div>
+                <div class="row">
+                    <button class="button grey ex-width">0</button>
+                    <button class="button grey">.</button>
+                    <button class="button gold">=</button>
+                </div>
+            </div>
+            <div class="cal-name">
+                <h2>Calculation Name</h2>
+                <input type="text" placeholder="Enter Calculation Name" id="calculationName" class="text">
+                <input type="submit" class="save" value="save" onclick="addNameToHistory()">
+            </div>
+        </div>
+        <div class="calc-h">
+            <h2>Calculation History</h2>
+            <div class="delete-btn">
+                <input type="checkbox" id="deleteCheckbox">
+                <label for="deleteCheckbox">Delete History</label>
+            </div>
+            <div class="history">
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .cal-name {
+            margin-top: 2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .text {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            color: rgb(221, 52, 52);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 12rem;
+        }
+
+        .save {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: blue;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 1.5rem;
+            width: 5rem;
+        }
+    </style>
+
+    <!--script-->
+    <script src="script.js"></script>
+</body>
+
+</html>
